@@ -117,46 +117,18 @@
   .brand {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
     line-height: 1;
     text-decoration: none;
   }
-  .brand-logo {
-    position: relative;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 700;
-    font-size: 34px;
-    letter-spacing: -0.04em;
-    color: var(--sky);
-    line-height: 1;
-    padding-top: 14px;
-    display: inline-block;
+  .brand-img {
+    height: 52px;
+    width: auto;
+    display: block;
+    transition: opacity .2s var(--ease);
   }
-  .brand-logo .house-icon {
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-42%);
-    width: 26px;
-    height: 26px;
-    color: var(--sky);
-    overflow: visible;
-  }
-  .brand-sub {
-    font-family: "Fredoka", sans-serif;
-    font-weight: 600;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    color: var(--sky);
-    text-transform: uppercase;
-    margin-left: 6px;
-    margin-bottom: 2px;
-    align-self: flex-end;
-    padding-bottom: 6px;
-  }
+  .brand:hover .brand-img { opacity: 0.85; }
   @media (max-width: 480px) {
-    .brand-logo { font-size: 28px; }
-    .brand-sub { display: none; }
+    .brand-img { height: 42px; }
   }
 
   .nav-links {
@@ -1013,7 +985,7 @@
   @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
   @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
   footer .brand { color: #fff; margin-bottom: 20px; }
-  footer .brand .brand-logo, footer .brand .brand-sub { color: var(--sky-soft) !important; }
+  footer .brand-img { height: 56px; }
   .footer-tagline { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 320px; }
   .footer-col h5 {
     font-family: "Fredoka", sans-serif;
@@ -1117,15 +1089,7 @@
 <header id="header">
   <div class="container nav">
     <a href="#" class="brand" aria-label="WOW HOUSE OSAKA">
-      <span class="brand-logo">
-        wow
-        <svg class="house-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M6 26 L20 12 L34 26" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <rect x="26" y="10" width="3.5" height="8" rx="1.5" fill="currentColor"/>
-          <path d="M28 8 Q31 5 29 2 Q27 0 30 -3" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-        </svg>
-      </span>
-      <span class="brand-sub">HOUSE OSAKA</span>
+      <img src="assets/logo.png" alt="WOW HOUSE OSAKA" class="brand-img" />
     </a>
     <nav class="nav-links">
       <a href="#concept" data-ja="コンセプト" data-en="Concept">コンセプト</a>
@@ -1554,15 +1518,7 @@
     <div class="footer-grid">
       <div>
         <a href="#" class="brand" aria-label="WOW HOUSE OSAKA">
-          <span class="brand-logo" style="color: var(--sky);">
-            wow
-            <svg class="house-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M4 18 L16 6 L28 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <rect x="22" y="6" width="3" height="6" rx="1.5" fill="currentColor"/>
-              <path d="M23.5 4 Q26 2 25 -1" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
-            </svg>
-          </span>
-          <span class="brand-sub" style="color: var(--sky);">HOUSE OSAKA</span>
+          <img src="assets/logo.png" alt="WOW HOUSE OSAKA" class="brand-img" />
         </a>
         <p class="footer-tagline" style="margin-top: 20px;" data-ja="1部屋に1つの「WOW」を設計した、子連れ家族のための大阪の宿。" data-en="A vacation home in Osaka with a 'WOW' in every room — designed for families.">
           1部屋に1つの「WOW」を設計した、子連れ家族のための大阪の宿。
