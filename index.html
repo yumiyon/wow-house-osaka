@@ -540,12 +540,16 @@
     position: relative;
     /* no overflow: hidden here — the quote sticks out and must stay visible */
   }
-  .concept-visual img {
+  .concept-visual > .ph,
+  .concept-visual > img {
     width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .concept-visual > img {
+    object-fit: cover;
+    display: block;
     background: var(--bg-2);
   }
   .concept-quote {
@@ -698,19 +702,14 @@
     position: relative;
     overflow: hidden;
     display: grid;
-    place-items: end stretch;
-  }
-  .wow-house-visual img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: 0;
+    place-items: center;
   }
   .wow-house-visual::before {
     content: "";
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(14,35,56,0) 40%, rgba(14,35,56,0.75) 100%);
-    z-index: 1;
+    background-image:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25), transparent 45%),
+      radial-gradient(circle at 70% 70%, rgba(255,200,58,0.2), transparent 45%);
   }
   .wow-house-stats {
     position: relative; z-index: 2;
@@ -1143,7 +1142,11 @@
     </div>
     <div class="hero-visual">
       <div class="hero-photo-main">
-        <img src="assets/01.png" alt="リビングの滑り台" />
+        <div class="ph"><div class="ph-inner">
+          <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          <div class="ph-label">MAIN VISUAL</div>
+          <div class="ph-desc" data-ja="ファーストビュー用写真" data-en="Hero photo">ファーストビュー用写真</div>
+        </div></div>
       </div>
       <div class="hero-deco-dot"></div>
       <div class="hero-deco-ring"></div>
@@ -1156,7 +1159,11 @@
 <section class="concept" id="concept">
   <div class="container concept-inner">
     <div class="concept-visual reveal">
-      <img src="assets/00.jpg" alt="家族の思い出" loading="lazy" />
+      <div class="ph"><div class="ph-inner">
+        <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <div class="ph-label">CONCEPT VISUAL</div>
+        <div class="ph-desc" data-ja="コンセプト用写真" data-en="Concept photo">コンセプト用写真</div>
+      </div></div>
       <div class="concept-quote" data-ja="自宅やホテルで、&#10;できないことを。" data-en="What home and hotels&#10;can't offer.">自宅やホテルで、できないことを。</div>
     </div>
     <div class="reveal">
@@ -1191,7 +1198,11 @@
         <div class="wow-card-photo">
           <div class="wow-num">01 / SLIDE</div>
           <div class="wow-tag" data-ja="人気No.1" data-en="Most loved">人気No.1</div>
-          <img src="assets/01.png" alt="リビングの滑り台" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 01</div>
+            <div class="ph-desc" data-ja="リビングの滑り台" data-en="Living room slide">リビングの滑り台</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="リビングの[br-sp]真ん中に、滑り台。" data-en="A slide right[br-sp] in the living room.">リビングの真ん中に、滑り台。</h3>
@@ -1205,7 +1216,11 @@
       <div class="wow-card reveal">
         <div class="wow-card-photo">
           <div class="wow-num">02 / CINEMA</div>
-          <img src="assets/02.png" alt="ホームシアター" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 02</div>
+            <div class="ph-desc" data-ja="ホームシアター" data-en="Home cinema">ホームシアター</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="おうちで、映画館。" data-en="Cinema at home.">おうちで、映画館。</h3>
@@ -1219,7 +1234,11 @@
       <div class="wow-card reveal">
         <div class="wow-card-photo">
           <div class="wow-num">03 / DINO</div>
-          <img src="assets/03.png" alt="恐竜の部屋" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 03</div>
+            <div class="ph-desc" data-ja="恐竜の部屋" data-en="Dinosaur room">恐竜の部屋</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="恐竜がいる部屋。" data-en="A room full of dinosaurs.">恐竜がいる部屋。</h3>
@@ -1233,7 +1252,11 @@
       <div class="wow-card reveal">
         <div class="wow-card-photo">
           <div class="wow-num">04 / PRINCESS</div>
-          <img src="assets/04.png" alt="天蓋ベッドの部屋" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 04</div>
+            <div class="ph-desc" data-ja="天蓋ベッドの部屋" data-en="Princess canopy room">天蓋ベッドの部屋</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="お姫様の天蓋ベッド。" data-en="Princess canopy bed.">お姫様の天蓋ベッド。</h3>
@@ -1247,7 +1270,11 @@
       <div class="wow-card reveal">
         <div class="wow-card-photo">
           <div class="wow-num">05 / TATAMI</div>
-          <img src="assets/05.png" alt="知育畳ルーム" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 05</div>
+            <div class="ph-desc" data-ja="知育畳ルーム" data-en="Tatami play room">知育畳ルーム</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="知育玩具いっぱいの[br-sp]畳の部屋。" data-en="Tatami room,[br-sp] packed with toys.">知育玩具いっぱいの畳の部屋。</h3>
@@ -1262,7 +1289,11 @@
         <div class="wow-card-photo">
           <div class="wow-num">06 / ROOFTOP</div>
           <div class="wow-tag" style="background: var(--pop); color: #fff;" data-ja="ここだけ" data-en="Exclusive">ここだけ</div>
-          <img src="assets/06.png" alt="屋上ミニ電動カー" loading="lazy" />
+          <div class="ph"><div class="ph-inner">
+            <svg class="ph-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <div class="ph-label">PHOTO 06</div>
+            <div class="ph-desc" data-ja="屋上ミニ電動カー" data-en="Rooftop mini cars">屋上ミニ電動カー</div>
+          </div></div>
         </div>
         <div class="wow-card-body">
           <h3 data-ja="屋上で、電動[br-sp]ミニカードライブ。" data-en="Drive electric[br-sp] mini cars on the rooftop.">屋上で、電動ミニカードライブ。</h3>
@@ -1287,7 +1318,6 @@
             </a>
           </div>
           <div class="wow-house-visual">
-            <img src="assets/07.png" alt="外観" loading="lazy" />
             <div class="wow-house-stats">
               <div><div class="num">14</div><div class="lbl" data-ja="定員" data-en="Guests">定員</div></div>
               <div><div class="num">3F</div><div class="lbl" data-ja="フロア" data-en="Floors">フロア</div></div>
