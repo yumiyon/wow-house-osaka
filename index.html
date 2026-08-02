@@ -120,16 +120,15 @@
     line-height: 1;
     text-decoration: none;
   }
-  .brand-svg {
+  .brand-img {
     height: 56px;
     width: auto;
     display: block;
     transition: opacity .2s var(--ease);
-    color: var(--sky);
   }
-  .brand:hover .brand-svg { opacity: 0.85; }
+  .brand:hover .brand-img { opacity: 0.85; }
   @media (max-width: 480px) {
-    .brand-svg { height: 44px; }
+    .brand-img { height: 44px; }
   }
 
   .nav-links {
@@ -986,7 +985,7 @@
   @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; } }
   @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
   footer .brand { color: #fff; margin-bottom: 20px; }
-  footer .brand-svg { height: 64px; }
+  footer .brand-img { height: 64px; }
   .footer-tagline { color: rgba(255,255,255,0.6); font-size: 14px; max-width: 320px; }
   .footer-col h5 {
     font-family: "Fredoka", sans-serif;
@@ -1090,15 +1089,7 @@
 <header id="header">
   <div class="container nav">
     <a href="#" class="brand" aria-label="WOW HOUSE OSAKA">
-      <svg class="brand-svg" viewBox="0 0 300 285" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="#00ADE5">
-          <rect x="169" y="45" width="9" height="30" rx="2.5"/>
-          <path d="M173.5 42 Q183 32 176 22 Q169 12 179 4" fill="none" stroke="#00ADE5" stroke-width="6" stroke-linecap="round"/>
-          <path d="M116 100 L150 65 L184 100" fill="none" stroke="#00ADE5" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="150" y="215" text-anchor="middle" font-family="Fredoka, 'Zen Maru Gothic', sans-serif" font-weight="700" font-size="155" letter-spacing="-8">wow</text>
-          <text x="150" y="265" text-anchor="middle" font-family="Fredoka, sans-serif" font-weight="600" font-size="22" letter-spacing="6">HOUSE OSAKA</text>
-        </g>
-      </svg>
+      <img src="assets/logo.png" alt="WOW HOUSE OSAKA" class="brand-img" />
     </a>
     <nav class="nav-links">
       <a href="#concept" data-ja="コンセプト" data-en="Concept">コンセプト</a>
