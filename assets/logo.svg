@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 285" aria-label="WOW HOUSE OSAKA">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&amp;display=swap');
+      .wow { font-family: 'Fredoka', 'Zen Maru Gothic', sans-serif; font-weight: 700; font-size: 155px; letter-spacing: -8px; }
+      .sub { font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 6px; }
+    </style>
+  </defs>
+  <g fill="#00ADE5">
+    <!-- Chimney (drawn first so roof line rests over its base) -->
+    <rect x="169" y="45" width="9" height="30" rx="2.5"/>
+    <!-- Smoke wisp -->
+    <path d="M173.5 42 Q183 32 176 22 Q169 12 179 4" fill="none" stroke="#00ADE5" stroke-width="6" stroke-linecap="round"/>
+    <!-- Roof -->
+    <path d="M116 100 L150 65 L184 100" fill="none" stroke="#00ADE5" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- wow -->
+    <text x="150" y="215" text-anchor="middle" class="wow">wow</text>
+    <!-- HOUSE OSAKA -->
+    <text x="150" y="265" text-anchor="middle" class="sub">HOUSE OSAKA</text>
+  </g>
+</svg>
